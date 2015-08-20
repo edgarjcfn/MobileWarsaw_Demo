@@ -8,17 +8,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MonthTableViewCellDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    var selected: Int = 0
+
+    @IBOutlet weak var mainLabel: UILabel!
+
+    override func viewDidAppear(animated: Bool) {
+        updateLabelText()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "EmbedTableView") {
+            if let tableView = segue.destinationViewController as? MonthsTableViewController {
+                tableView.delegate = self
+            }
+        }
     }
+
+    //MARK: -MonthtableViewCellDelegate 
+    func monthChanged(month:String, active:Bool) {
+        if (active) {
+            selected++
+        } else {
+            selected--
+        }
+
+        updateLabelText()
+    }
+
+    //MARK: -Private
+    func updateLabelText() {
+        // Without stringsdict
+//        let localised = NSBundle.mainBundle().localizedStringForKey("phrase", value: "phrase", table: "plurals")
+//        let formatted = NSString(format: localised, selected)
+
+        // With stringsdict
+        let formatted = NSString.localizedStringWithFormat(NSLocalizedString("phrase", tableName: "plurals", comment: ""), selected)
+        mainLabel.text = formatted as String
+    }
+
 
 
 }

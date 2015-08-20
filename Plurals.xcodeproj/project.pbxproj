@@ -14,6 +14,9 @@
 		6D7E70321B862E6600B0B632 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E70301B862E6600B0B632 /* LaunchScreen.xib */; };
 		6D7E703E1B862E6700B0B632 /* PluralsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E703D1B862E6700B0B632 /* PluralsTests.swift */; };
 		6D7E704C1B8630E900B0B632 /* MonthsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E704B1B8630E900B0B632 /* MonthsTableViewController.swift */; };
+		6D7E70501B863AC900B0B632 /* MonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E704F1B863AC900B0B632 /* MonthTableViewCell.swift */; };
+		6D7E70591B86403B00B0B632 /* plurals.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E705B1B86403B00B0B632 /* plurals.strings */; };
+		6D7E70601B8642D900B0B632 /* plurals.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E70621B8642D900B0B632 /* plurals.stringsdict */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		6D7E704B1B8630E900B0B632 /* MonthsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthsTableViewController.swift; sourceTree = "<group>"; };
 		6D7E704D1B86378200B0B632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		6D7E704E1B86378200B0B632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6D7E704F1B863AC900B0B632 /* MonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthTableViewCell.swift; sourceTree = "<group>"; };
+		6D7E705C1B86403F00B0B632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/plurals.strings; sourceTree = "<group>"; };
+		6D7E705D1B86404100B0B632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/plurals.strings; sourceTree = "<group>"; };
+		6D7E70611B8642D900B0B632 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/plurals.stringsdict; sourceTree = "<group>"; };
+		6D7E70631B86454E00B0B632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = pl; path = pl.lproj/plurals.stringsdict; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,9 @@
 				6D7E70301B862E6600B0B632 /* LaunchScreen.xib */,
 				6D7E70251B862E6600B0B632 /* Supporting Files */,
 				6D7E704B1B8630E900B0B632 /* MonthsTableViewController.swift */,
+				6D7E704F1B863AC900B0B632 /* MonthTableViewCell.swift */,
+				6D7E705B1B86403B00B0B632 /* plurals.strings */,
+				6D7E70621B8642D900B0B632 /* plurals.stringsdict */,
 			);
 			path = Plurals;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 6D7E70191B862E6600B0B632;
 			productRefGroup = 6D7E70231B862E6600B0B632 /* Products */;
@@ -199,6 +211,8 @@
 			files = (
 				6D7E702D1B862E6600B0B632 /* Main.storyboard in Resources */,
 				6D7E70321B862E6600B0B632 /* LaunchScreen.xib in Resources */,
+				6D7E70591B86403B00B0B632 /* plurals.strings in Resources */,
+				6D7E70601B8642D900B0B632 /* plurals.stringsdict in Resources */,
 				6D7E702F1B862E6600B0B632 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7E70501B863AC900B0B632 /* MonthTableViewCell.swift in Sources */,
 				6D7E702A1B862E6600B0B632 /* ViewController.swift in Sources */,
 				6D7E70281B862E6600B0B632 /* AppDelegate.swift in Sources */,
 				6D7E704C1B8630E900B0B632 /* MonthsTableViewController.swift in Sources */,
@@ -258,6 +273,24 @@
 				6D7E704E1B86378200B0B632 /* pl */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		6D7E705B1B86403B00B0B632 /* plurals.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D7E705C1B86403F00B0B632 /* en */,
+				6D7E705D1B86404100B0B632 /* pl */,
+			);
+			name = plurals.strings;
+			sourceTree = "<group>";
+		};
+		6D7E70621B8642D900B0B632 /* plurals.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D7E70611B8642D900B0B632 /* en */,
+				6D7E70631B86454E00B0B632 /* pl */,
+			);
+			name = plurals.stringsdict;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

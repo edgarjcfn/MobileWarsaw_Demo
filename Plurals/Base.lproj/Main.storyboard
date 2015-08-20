@@ -24,11 +24,11 @@
                                     <constraint firstAttribute="height" constant="400" id="GIh-9W-a9P"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Thj-6S-IuU" kind="embed" id="4U0-qX-VZJ"/>
+                                    <segue destination="Thj-6S-IuU" kind="embed" identifier="EmbedTableView" id="4U0-qX-VZJ"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35E-G0-7rT">
-                                <rect key="frame" x="139" y="477" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35E-G0-7rT">
+                                <rect key="frame" x="16" y="517.5" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,14 +36,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="35E-G0-7rT" secondAttribute="bottom" constant="30" id="4ca-nc-MtW"/>
+                            <constraint firstItem="35E-G0-7rT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="6Q9-GE-yrS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aKe-aV-pHE" secondAttribute="trailing" id="R3l-0R-71p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="35E-G0-7rT" secondAttribute="trailing" id="SWO-Od-jPC"/>
                             <constraint firstItem="aKe-aV-pHE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="VDO-gf-Mrb"/>
                             <constraint firstItem="aKe-aV-pHE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="X9G-GJ-7ya"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="35E-G0-7rT" id="oVM-Vl-x21"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-79.466666666666669" y="68.159999999999997"/>
+            <point key="canvasLocation" x="-80" y="141"/>
         </scene>
         <!--Months Table View Controller-->
         <scene sceneID="ica-gN-MQK">
@@ -54,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="qzh-wd-xbJ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="qzh-wd-xbJ" customClass="MonthTableViewCell" customModule="Plurals" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qzh-wd-xbJ" id="ULq-Tg-voG">
@@ -66,8 +72,11 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-2n-Flg">
+                                        <switch opaque="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u0Q-2n-Flg">
                                             <rect key="frame" x="231" y="8" width="51" height="27.5"/>
+                                            <connections>
+                                                <action selector="switchChanged:" destination="qzh-wd-xbJ" eventType="valueChanged" id="2Ml-vO-3Ca"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                     <constraints>
@@ -79,6 +88,10 @@
                                         <constraint firstItem="u0Q-2n-Flg" firstAttribute="top" secondItem="ULq-Tg-voG" secondAttribute="topMargin" id="itf-Oh-pkw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activeSwitch" destination="u0Q-2n-Flg" id="9vA-fg-M31"/>
+                                    <outlet property="monthNameLabel" destination="xy0-Zu-Lwp" id="kgF-CP-2DT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

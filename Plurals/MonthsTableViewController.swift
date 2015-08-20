@@ -12,7 +12,7 @@ import UIKit
 class MonthsTableViewController : UITableViewController {
 
     let data = NSDateFormatter().monthSymbols
-//    let data = ["January", "February"]
+    var delegate: MonthTableViewCellDelegate!
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -23,13 +23,12 @@ class MonthsTableViewController : UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
-        if let month = data[indexPath.row] as? String,
-           let label = cell.contentView.viewWithTag(10) as? UILabel {
-
-            label.text = month
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MonthTableViewCell
+        if let month = data[indexPath.row] as? String {
+            cell.monthNameLabel.text = month
+            cell.delegate = self.delegate
         }
+
         return cell
     }
-
 }
