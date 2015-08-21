@@ -39,12 +39,11 @@ class ViewController: UIViewController, MonthTableViewCellDelegate {
 
     //MARK: -Private
     func updateLabelText() {
-        // Without stringsdict
-//        let localised = NSBundle.mainBundle().localizedStringForKey("phrase", value: "phrase", table: "plurals")
-//        let formatted = NSString(format: localised, selected)
 
-        // With stringsdict
-        let formatted = NSString.localizedStringWithFormat(NSLocalizedString("phrase", tableName: "plurals", comment: ""), selected)
+        // Get localised text
+        let localised = NSBundle.mainBundle().localizedStringForKey("phrase", value: "phrase", table: "plurals")
+        let formatted = NSString(format: localised, selected)
+
         mainLabel.text = formatted as String
     }
 

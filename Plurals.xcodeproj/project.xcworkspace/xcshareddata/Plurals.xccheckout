@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F539AA0A-968C-48EF-AC86-6A49A2FACB47</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D5388E37BED34EC6239C104F7180E7524CE0B6CC</key>
+		<string>https://github.com/edgarjcfn/MobileWarsaw_Demo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Plurals.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D5388E37BED34EC6239C104F7180E7524CE0B6CC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/edgarjcfn/MobileWarsaw_Demo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D5388E37BED34EC6239C104F7180E7524CE0B6CC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D5388E37BED34EC6239C104F7180E7524CE0B6CC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Plurals</string>
+		</dict>
+	</array>
+</dict>
+</plist>
