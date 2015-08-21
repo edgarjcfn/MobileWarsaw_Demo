@@ -7,3 +7,6 @@ http://www.objc.io/issues/9-strings/string-localization/#plural-and-gender-suppo
 
 By running the app in English or Polish we can see the demonstration of
 the different types of plurals.
+
+The polish plural rules were adopted from this website: 
+http://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html
